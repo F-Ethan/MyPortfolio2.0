@@ -1,0 +1,68 @@
+* , *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+section{
+    width: 100vw; 
+    min-height: 50vh;
+    background-color: aqua;
+    border-bottom: 6px solid black;
+
+}
+
+nav{
+    width:100vw;
+    background-color: lightgray;
+    padding: 1em;
+    display: flex;
+}
+
+.nav{ 
+    margin: 0 1em;
+}
+
+.float{
+    margin-left: auto;
+    margin-right: 1em;
+
+}
+
+.section1{
+    background-image: url('./imgs/keyboard.jpg');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 2em 1fr 1fr 2em;
+    grid-template-rows: 6em auto 1fr 2em;
+    color: white;
+    gap: 1.5em .5em;
+    position: relative;
+    z-index: 1;
+    /* background-position: center; */
+}
+
+.section1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right:0;
+    left: 0;
+    top: 5em;
+    background-image: linear-gradient(rgb(0,0,0,0) 0%, rgb(0,0,0,.5) 20%, rgb(0,0,0, 1) 100%);
+    z-index: -1;
+}
+
+.section1 h1{
+    font-size: 2em;
+    grid-column: 2 / span 3;
+    grid-row: 2;
+}
+
+.section1 h3{
+    font-size: 1.25em;
+    grid-column: 2 / span 3;
+    grid-row: 3;
+}
+
+
